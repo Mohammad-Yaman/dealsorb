@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fontawesome.com/search?q=cart&o=r&m=free">
+    <title>Document</title>
+
+    <style>
+        .carousel-inner {
+          transition: transform 0.3s ease;
+        }
+      
+        .carousel-slide {
+          min-width: 150px;
+        }
+      
+        .carousel-control {
+          width: 40px;
+          height: 40px;
+          background-color: #333;
+          color: #fff;
+          font-size: 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      </style>
+      
+
+    <style>
+        .carousel {
+            height: 300px; /* Adjust the height as needed */
+        }
+    
+        .slide-container {
+            display: flex;
+            transition: transform 1s ease-in-out;
+            align-items: center; /* Center vertically */
+        }
+    
+        .slide {
+            flex: 0 0 100%;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+        }
+        
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="bg-black w-full h-10 flex-col text-center justify-center">
+        <h1 class="text-white font-light text-[10px] pt-1">Summer Sale For All Swim Suits And Free Express Delivery - Off 50%!
+            <a href="#" class="font-bold underline">ShopNow</a>
+        </h1>
+    </div>
+
+    <section>
+        <div class="w-full">
+            <h1 class="uppercase text-center font-semibold mt-5">Browse Categories</h1>
+            <img class="mt-2" src="img/6448e075bbf3a.jpeg" alt="">
+        </div>
+
+        <div class="flex items-center">
+            <div class="bg-red-700 w-4 h-5 rounded mt-3 ml-4"></div>
+            <div>
+                <h1 class="pt-3 pl-2 text-red-700 text-sm font-medium">Categories</h1>
+            </div>
+        </div>
+    <h1 class="ml-3 text-xl font-bold text-center uppercase mt-3">Popular Categories</h1>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slideContainer = document.querySelector(".slide-container");
+            let currentSlide = 0;
+    
+            function showSlide(slideIndex) {
+                const slideWidth = slideContainer.clientWidth;
+                slideContainer.style.transform = `translateX(-${slideWidth * slideIndex}px)`;
+            }
+    
+            function prevSlide() {
+                currentSlide = (currentSlide - 2 + slideContainer.children.length) % slideContainer.children.length;
+                showSlide(currentSlide);
+            }
+    
+            function nextSlide() {
+                currentSlide = (currentSlide + 2) % slideContainer.children.length;
+                showSlide(currentSlide);
+            }
+    
+            // Change slide when pressing arrow keys
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "ArrowLeft") {
+                    prevSlide();
+                } else if (event.key === "ArrowRight") {
+                    nextSlide();
+                }
+            });
+    
+            // Change slide every 5 seconds (adjust as needed)
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+    
+
+    <div class="carousel flex justify-center items-center overflow-hidden relative">
+        <div class="slide-container">
+            <div class="slide space-x-6">
+                <img src="img/63f492f6168b1.png" alt="Image 1" width="150px">
+                <img src="img/63f492f616ae8.png" alt="Image 2" width="150px">
+            </div>
+            <div class="slide space-x-6">
+                <img src="img/63f492f616ae8.png" alt="Image 2" width="150px">
+                <img src="img/63f492f616cd8.png" alt="Image 3" width="150px">
+            </div>
+            <div class="slide space-x-6">
+                <img src="img/63f492f616cd8.png" alt="Image 3" width="150px">
+                <img src="img/63f492f61704b.png" alt="Image 1" width="150px">
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex items-center">
+        <div class="bg-red-700 w-4 h-5 rounded mt-3 ml-4"></div>
+        <div>
+            <h1 class="pt-3 pl-2 text-red-700 text-sm font-medium">Featured</h1>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="ml-3 text-xl font-bold text-center uppercase mt-3">new arrival</h1>
+        <img src="img/download.jpeg" alt="" class="rounded-lg w-72 mt-2 m-auto">
+    </div>
+
+    <div>
+        <img src="img/images.jpeg" alt="" class="rounded-lg w-72 mt-2 m-auto">
+    </div>
+
+    <div class="flex mt-2 space-x-2 w-4/5 m-auto">
+        <img src="img/images (2).jpeg" alt="" class="w-[140px] rounded-lg">
+        <img src="img/images (1).jpeg" alt="" class="w-[140px] rounded-lg">
+    </div>
+    
+    <div class="flex items-center mt-3">
+        <div class="bg-red-700 w-4 h-5 rounded mt-3 ml-4"></div>
+        <div>
+            <h1 class="pt-3 pl-2 text-red-700 text-sm font-medium">This Month</h1>
+        </div>
+    </div>
+    <h1 class="ml-3 text-xl font-bold text-center uppercase mt-3">Best Selling Products</h1>
+
+    <div class="carousel flex justify-center items-center overflow-hidden relative">
+        <div class="slide-container">
+            <div class="slide">
+                <img src="img/63f492f6168b1.png" alt="Image 1" width="150px">
+            </div>
+            <div class="slide">
+                <img src="img/63f492f616ae8.png" alt="Image 2" width="150px">
+            </div>
+            <div class="slide">
+                <img src="img/63f492f616cd8.png" alt="Image 3" width="150px">
+            </div>
+        </div>
+    </div>
+      
+
+</body>
+</html>
